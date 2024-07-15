@@ -22,9 +22,9 @@ public class Lab2Bai3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        //binding = ActivityLab2Bai3Binding.inflate(getLayoutInflater());
+        binding = ActivityLab2Bai3Binding.inflate(getLayoutInflater());
         //View view = binding.getRoot();
-        setContentView(ActivityLab2Bai3Binding.inflate(getLayoutInflater()).getRoot());
+        setContentView(binding.getRoot());
         //setContentView(R.layout.activity_lab2_bai3);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
