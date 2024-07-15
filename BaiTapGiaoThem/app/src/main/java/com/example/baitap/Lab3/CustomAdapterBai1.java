@@ -10,27 +10,25 @@ import android.widget.TextView;
 
 import com.example.baitap.R;
 
-public class CustomAdapterBai1 extends BaseAdapter {
-    private Context context;
-    private String[] items;
-    private int[] images;
-    private LayoutInflater inflater;
+import java.util.ArrayList;
 
-    public CustomAdapterBai1(Context context, String[] items, int[] images) {
+public class CustomAdapterBai1 extends BaseAdapter {
+    private final Context context;
+    private final ArrayList<App> list;
+
+    public CustomAdapterBai1(Context context, ArrayList<App> list) {
         this.context = context;
-        this.items = items;
-        this.images = images;
-        this.inflater = LayoutInflater.from(context);
+        this.list = list;
     }
 
     @Override
     public int getCount() {
-        return items.length;
+        return list.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return items[position];
+        return list.get(position);
     }
 
     @Override
@@ -41,15 +39,34 @@ public class CustomAdapterBai1 extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.list_item_bai1, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item_bai1, parent, false);
         }
 
         ImageView imageView = convertView.findViewById(R.id.imageView);
         TextView textView = convertView.findViewById(R.id.textView);
 
-        imageView.setImageResource(images[position]);
-        textView.setText(items[position]);
+        App listApp = list.get(position);
+        imageView.setImageResource(listApp.getHinh());
+        textView.setText(listApp.getTen());
 
         return convertView;
+    }
+
+    public static class App {
+        private final int hinh;
+        private final String ten;
+
+        public App(int hinh, String ten) {
+            this.hinh = hinh;
+            this.ten = ten;
+        }
+
+        public int getHinh() {
+            return hinh;
+        }
+
+        public String getTen() {
+            return ten;
+        }
     }
 }

@@ -11,7 +11,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.baitap.R;
 
+import java.util.ArrayList;
+
 public class Lab3Bai1 extends AppCompatActivity {
+    private final ArrayList<CustomAdapterBai1.App> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +27,19 @@ public class Lab3Bai1 extends AppCompatActivity {
             return insets;
         });
 
-        // Thêm đoạn mã này để thiết lập ListView
         ListView listView = findViewById(R.id.listView1);
 
-        String[] items = {"Facebook", "Linkedin", "MSN", "Skype", "Yahoo", "Twitter"};
-        int[] images = {R.drawable.facebook, R.drawable.linkedin, R.drawable.msn, R.drawable.skype, R.drawable.yahoo, R.drawable.twitter};
+        list.add(new CustomAdapterBai1.App(R.drawable.facebook, "Facebook"));
+        list.add(new CustomAdapterBai1.App(R.drawable.linkedin, "Linkedin"));
+        list.add(new CustomAdapterBai1.App(R.drawable.msn, "MSN"));
+        list.add(new CustomAdapterBai1.App(R.drawable.skype, "Skype"));
+        list.add(new CustomAdapterBai1.App(R.drawable.yahoo, "Yahoo"));
+        list.add(new CustomAdapterBai1.App(R.drawable.twitter, "Twitter"));
 
-        CustomAdapterBai1 adapter = new CustomAdapterBai1(this, items, images);
+        CustomAdapterBai1 adapter = new CustomAdapterBai1(this, list);
         listView.setAdapter(adapter);
     }
 }
+
+//String[] items = {"Facebook", "Linkedin", "MSN", "Skype", "Yahoo", "Twitter"};
+//int[] images = {R.drawable.facebook, R.drawable.linkedin, R.drawable.msn, R.drawable.skype, R.drawable.yahoo, R.drawable.twitter};

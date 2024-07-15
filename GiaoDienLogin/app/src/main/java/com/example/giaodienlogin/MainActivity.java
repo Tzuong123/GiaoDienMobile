@@ -1,4 +1,4 @@
-package com.example.baitap.Lab3;
+package com.example.giaodienlogin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,38 +10,37 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.baitap.R;
-import com.example.baitap.databinding.ActivityLab3Binding;
+import com.example.giaodienlogin.databinding.ActivityMainBinding;
 
-public class Lab3 extends AppCompatActivity {
-    private ActivityLab3Binding binding;
+public class MainActivity extends AppCompatActivity {
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding = ActivityLab3Binding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        //setContentView(R.layout.activity_lab3);
+        //setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        binding.btnlab3bai1.setOnClickListener(new View.OnClickListener() {
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Lab3.this, Lab3Bai1.class);
+                Intent intent = new Intent(MainActivity.this, LoginScreen.class);
                 startActivity(intent);
             }
         });
 
-        binding.btnlab3bai2.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Lab3.this, Lab3Bai2.class);
+                Intent intent = new Intent(MainActivity.this, SignupScreen.class);
                 startActivity(intent);
             }
         });

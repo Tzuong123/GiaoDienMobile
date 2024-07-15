@@ -1,4 +1,4 @@
-package com.example.baitap.Lab3;
+package com.example.baitap.Lab4;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,11 +12,11 @@ import com.example.baitap.R;
 
 import java.util.ArrayList;
 
-public class CustomAdapterBai2 extends BaseAdapter {
+public class CustomAdapterLab4 extends BaseAdapter {
     private final Context context;
-    private final ArrayList<Item> list;
+    private final ArrayList<CustomAdapterLab4.Item> list;
 
-    public CustomAdapterBai2(Context context, ArrayList<Item> list) {
+    public CustomAdapterLab4(Context context, ArrayList<CustomAdapterLab4.Item> list) {
         this.context = context;
         this.list = list;
     }
@@ -39,14 +39,14 @@ public class CustomAdapterBai2 extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.list_item_bai2, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item_lab4, parent, false);
         }
 
-        ImageView imageView = convertView.findViewById(R.id.imageView);
-        TextView textView1 = convertView.findViewById(R.id.textView1);
-        TextView textView2 = convertView.findViewById(R.id.textView2);
+        ImageView imageView = convertView.findViewById(R.id.Iview);
+        TextView textView1 = convertView.findViewById(R.id.Tview1);
+        TextView textView2 = convertView.findViewById(R.id.Tview2);
 
-        Item list1 = list.get(position);
+        CustomAdapterLab4.Item list1 = list.get(position);
 
         imageView.setImageResource(list1.getHinh());
         textView1.setText(list1.getTen());
@@ -54,11 +54,9 @@ public class CustomAdapterBai2 extends BaseAdapter {
 
         return convertView;
     }
-
     public Context getContext() {
         return context;
     }
-
     public static class Item {
         private String ten;
         private String gia;

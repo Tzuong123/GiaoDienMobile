@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.baitap.R;
 
+import java.util.ArrayList;
+
 public class Lab3Bai2 extends AppCompatActivity {
 
     @Override
@@ -26,11 +28,12 @@ public class Lab3Bai2 extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.listView);
 
-        String[] items1 = {"Bánh canh", "Bánh tráng", "Bún chả"};
-        String[] items2 = {"53000.0", "25000.0", "83000.0"};
-        int[] images = {R.drawable.banhcanh, R.drawable.banhtrang, R.drawable.buncha};
+        ArrayList<CustomAdapterBai2.Item> itemList = new ArrayList<>();
+        itemList.add(new CustomAdapterBai2.Item("Bánh canh", "53000.0", R.drawable.banhcanh));
+        itemList.add(new CustomAdapterBai2.Item("Bánh tráng", "25000.0", R.drawable.banhtrang));
+        itemList.add(new CustomAdapterBai2.Item("Bún chả", "83000.0", R.drawable.buncha));
 
-        CustomAdapterBai2 adapter = new CustomAdapterBai2(this, items1, items2, images);
+        CustomAdapterBai2 adapter = new CustomAdapterBai2(this, itemList);
         listView.setAdapter(adapter);
     }
 }
