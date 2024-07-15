@@ -21,7 +21,7 @@ public class DangNhap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding =ActivityDangNhapBinding.inflate(getLayoutInflater());
+        binding = ActivityDangNhapBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
         //setContentView(R.layout.activity_dang_nhap);
