@@ -14,6 +14,7 @@ import com.example.baitap.Lab1.Lab1;
 import com.example.baitap.Lab2.Lab2;
 import com.example.baitap.Lab3.Lab3;
 import com.example.baitap.Lab4.Lab4;
+import com.example.baitap.Lab5.Lab5;
 import com.example.baitap.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        binding.btnlab5.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, Lab5.class);
-//                startActivity(intent);
-//            }
-//        });
+        binding.btnlab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Lab5.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txtvtieude"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtvngay"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvtieude"
+        android:text="Thời gian:" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvngay"
+        android:text="Ghi chú:" />
+
+    <TextView
+        android:id="@+id/txttieudesukien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/txtvtieude"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtngaysukien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txttieudesukien"
+        android:layout_toEndOf="@id/txtvtieude"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtghichusukien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtngaysukien"
+        android:layout_toEndOf="@id/txtvtieude"
+        android:textSize="14sp" />
+</RelativeLayout>
