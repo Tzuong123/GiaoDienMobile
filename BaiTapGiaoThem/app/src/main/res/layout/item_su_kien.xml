@@ -26,7 +26,7 @@
         android:text="Ghi chú:" />
 
     <TextView
-        android:id="@+id/txttieudesukien"
+        android:id="@+id/txttieude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/txtvtieude"
@@ -34,18 +34,18 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/txtngaysukien"
+        android:id="@+id/txtngay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txttieudesukien"
+        android:layout_below="@id/txttieude"
         android:layout_toEndOf="@id/txtvtieude"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/txtghichusukien"
+        android:id="@+id/txtghichu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtngaysukien"
+        android:layout_below="@id/txtngay"
         android:layout_toEndOf="@id/txtvtieude"
         android:textSize="14sp" />
 </RelativeLayout>

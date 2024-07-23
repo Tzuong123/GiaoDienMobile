@@ -24,8 +24,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Lab5 extends AppCompatActivity {
-    private ArrayList<Event> list = new ArrayList<>();
-    private EventAdapter eventAdapter;
+    private ArrayList<Lich> list = new ArrayList<>();
+    private LichAdapter lichAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +40,10 @@ public class Lab5 extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        eventAdapter = new EventAdapter(list);
-        recyclerView.setAdapter(eventAdapter);
+        lichAdapter = new LichAdapter(list);
+        recyclerView.setAdapter(lichAdapter);
 
-        Button btnthemsk = findViewById(R.id.btnthemsk);
+        Button btnthemsk = findViewById(R.id.btnthem);
         btnthemsk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,11 +56,11 @@ public class Lab5 extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_them_su_kien);
 
-        EditText edttieudesukien = dialog.findViewById(R.id.edttieudesukien);
+        EditText edttieude = dialog.findViewById(R.id.edttieude);
         Button btnchonngay = dialog.findViewById(R.id.btnchonngay);
         Button btnchonthoigian = dialog.findViewById(R.id.btnchonthoigian);
-        EditText edtghichusukien = dialog.findViewById(R.id.edtghichusukien);
-        Button btnluusukien = dialog.findViewById(R.id.btnluusukien);
+        EditText edtghichu = dialog.findViewById(R.id.edtghichu);
+        Button btnluu = dialog.findViewById(R.id.btnluu);
 
         final String[] selectedDate = {""};
         final String[] selectedTime = {""};
@@ -94,18 +94,18 @@ public class Lab5 extends AppCompatActivity {
             }
         });
 
-        btnluusukien.setOnClickListener(new View.OnClickListener() {
+        btnluu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String title = edttieudesukien.getText().toString();
-                String note = edtghichusukien.getText().toString();
+                String title = edttieude.getText().toString();
+                String note = edtghichu.getText().toString();
                 String dateTime = selectedDate[0] + " " + selectedTime[0];
 
                 if (title.isEmpty() || selectedDate[0].isEmpty() || selectedTime[0].isEmpty()) {
                     Toast.makeText(Lab5.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else {
-                    list.add(new Event(title, dateTime, note));
-                    eventAdapter.notifyDataSetChanged();
+                    list.add(new Lich(title, dateTime, note));
+                    lichAdapter.notifyDataSetChanged();
                     dialog.dismiss();
                 }
             }

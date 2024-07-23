@@ -6,10 +6,10 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/edttieudesukien"
+        android:id="@+id/edttieude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tiêu đề sự kiện" />
+        android:hint="Tiêu đề" />
 
     <Button
         android:id="@+id/btnchonngay"
@@ -24,14 +24,14 @@
         android:text="Chọn giờ" />
 
     <EditText
-        android:id="@+id/edtghichusukien"
+        android:id="@+id/edtghichu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ghi chú" />
 
     <Button
-        android:id="@+id/btnluusukien"
+        android:id="@+id/btnluu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lưu sự kiện" />
+        android:text="Lưu" />
 </LinearLayout>

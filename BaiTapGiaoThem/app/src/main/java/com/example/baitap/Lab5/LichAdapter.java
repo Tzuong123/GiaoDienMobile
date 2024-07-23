@@ -12,10 +12,10 @@ import com.example.baitap.R;
 
 import java.util.ArrayList;
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> {
-    private ArrayList<Event> list;
+public class LichAdapter extends RecyclerView.Adapter<LichAdapter.ViewHolder> {
+    private ArrayList<Lich> list;
 
-    public EventAdapter(ArrayList<Event> list) {
+    public LichAdapter(ArrayList<Lich> list) {
         this.list = list;
     }
 
@@ -28,8 +28,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Event event = list.get(position);
-        holder.bind(event);
+        Lich lich = list.get(position);
+        holder.bind(lich);
     }
 
     @Override
@@ -38,19 +38,19 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txttieudesukien, txtngaysukien, txtghichusukien;
+        TextView txttieude, txtngay, txtghichu;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txttieudesukien = itemView.findViewById(R.id.txttieudesukien);
-            txtngaysukien = itemView.findViewById(R.id.txtngaysukien);
-            txtghichusukien = itemView.findViewById(R.id.txtghichusukien);
+            txttieude = itemView.findViewById(R.id.txttieude);
+            txtngay = itemView.findViewById(R.id.txtngay);
+            txtghichu = itemView.findViewById(R.id.txtghichu);
         }
 
-        public void bind(Event event) {
-            txttieudesukien.setText(event.getTieude());
-            txtngaysukien.setText(event.getNgay());
-            txtghichusukien.setText(event.getGhichu());
+        public void bind(Lich lich) {
+            txttieude.setText(lich.getTieude());
+            txtngay.setText(lich.getNgay());
+            txtghichu.setText(lich.getGhichu());
         }
     }
 }

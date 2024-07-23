@@ -9,11 +9,11 @@
     tools:context=".Lab5.Lab5">
 
     <Button
-        android:id="@+id/btnthemsk"
+        android:id="@+id/btnthem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Thêm sự kiện" />
+        android:text="Thêm lịch làm việc" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

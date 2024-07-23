@@ -1,11 +1,11 @@
 package com.example.baitap.Lab5;
 
-public class Event {
+public class Lich {
     private String tieude;
     private String ngay;
     private String ghichu;
 
-    public Event(String tieude, String ngay, String ghichu) {
+    public Lich(String tieude, String ngay, String ghichu) {
         this.tieude = tieude;
         this.ngay = ngay;
         this.ghichu = ghichu;
