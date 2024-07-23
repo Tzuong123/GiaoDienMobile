@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BaiTap"
         tools:targetApi="31">
         <activity
+            android:name=".xfile.MainSinhVien"
+            android:exported="false" />
+        <activity
+            android:name=".json.Json"
+            android:exported="false" />
+        <activity
             android:name=".Lab5.Lab5"
             android:exported="false" />
         <activity

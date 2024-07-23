@@ -38,4 +38,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab 5" />
+
+    <Button
+        android:id="@+id/btnjson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Json" />
+
+    <Button
+        android:id="@+id/btnxfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xfile" />
 </LinearLayout>
